@@ -13,14 +13,13 @@ function myFunction() {
     var inputArray = input.split(" ");
 
     if (inputIsValid(inputArray, musicNotesArray) == true) {
-
-
-    text = inputArray;
-    document.getElementById("noteButton").innerHTML = text; // prints input
+      text = convertToNums(inputArray);
+      document.getElementById("noteButton").innerHTML = text; // prints input
     }
+
     else {
-alert("Please enter valid music notes!");
-}
+      alert("Please enter valid music notes!");
+    }
 }
 
 // functions to make sure that input contains musical notes
@@ -42,6 +41,13 @@ function inputIsValid(inputArray, musicNotesArray) {
     return true;
   }
 
+function convertToNums(inputArray) {
+  var output = [];
+  for (var i = 0; i < inputArray.length; i++) {
+      output.push(musicNotesArray.indexOf(inputArray[i]));
+  }
+  return output;
+}
 
 </script>
 </body>
