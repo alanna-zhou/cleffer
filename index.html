@@ -9,14 +9,18 @@ var musicNotesArray = ["C", "D", "E", "F", "G", "A", "B"];
 function myFunction() {
     var text;
     var input = prompt("enter note here").toUpperCase();
+    input = input.trim();
     var inputArray = input.split(" ");
 
     if (inputIsValid(inputArray, musicNotesArray) == true) {
-      alert("yes, array contains object");
-    }
+
 
     text = inputArray;
     document.getElementById("noteButton").innerHTML = text; // prints input
+    }
+    else {
+alert("Please enter valid music notes!");
+}
 }
 
 // functions to make sure that input contains musical notes
