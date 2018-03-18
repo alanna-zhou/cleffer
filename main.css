@@ -1,0 +1,69 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Arapey:400italic);
+
+button {
+  border: 1px solid #fff;
+  background: transparent;
+  display: block;
+  font-style: normal;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: .2em;
+  position: relative;
+  text-decoration: none;
+  transition: 1s ease;
+  -webkit-transition: 2s ease;
+  width: 25.5em;
+}
+
+button {
+  background: #fffff;
+  display: block;
+  font-size: .875rem;
+  padding: .4em .4em .4em;
+  text-align: center;
+}
+
+button:hover {
+  background: #b89555;
+  transition: 1s ease;
+  -webkit-transition: 2s ease;
+}
+
+.topLine {
+  color: #424242;
+  font-family: 'Arapey', 'serif';
+  font-size: 2em;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: .1em;
+  margin: 0;
+  padding: 0;
+}
+
+.bottomLine {
+  color: #b89555;
+  font-family: 'Montserrat', 'sans-serif';
+  font-size: 1.8em;
+  font-weight: 400;
+  letter-spacing: .3em;
+  margin: 0;
+  padding: 0;
+}
+
+.ogButton {
+  background: #fff;
+  display: block;
+  font-size: .875rem;
+  padding: .8em 2em 1em;
+  text-align: center;
+}
+
+body {
+background-color: #f9e1de;
+}
+
+p {
+ font-family: 'Montserrat', 'sans-serif';
+ font-size: 24px;
+ text-align: center;
+}
