@@ -4,7 +4,6 @@
 <button onclick="myFunction()">input your note here!</button>
 <p id="treble"></p>
 <p id="bass"></p>
-<p id="image"></p>
 
 <script>
 var musicNotesArray = ["C", "D", "E", "F", "G", "A", "B"];
@@ -119,6 +118,14 @@ function trebleToBass(arr) {
     }
     return output;
  }
+
+ function bassToTreble(arr) {
+  var output = [];
+  	for (var i = 0; i < arr.length; i++) {
+     	output.push(arr[i] + 8 - 5); // add an octave and subtract 5
+     }
+     return output;
+  }
 
  function postImages(convertedNums, imgArray) {
    for (var i = 0; i < convertedNums.length; i++) {
