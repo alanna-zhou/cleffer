@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat|Arapey:400italic);
 
+onclick {
+  float: center;
+}
+
 button {
   border: 3px solid #fff;
   background: transparent;
@@ -66,4 +70,45 @@ p {
  font-family: 'Montserrat', 'sans-serif';
  font-size: 24px;
  text-align: center;
+}
+
+{
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 300px) {
+    .column {
+        width: 100%;
+    }
+}
+        .my-col-count-style {
+          column-count: 2;
+          column-gap: 15px;
+        }
+
+        .my-col-count-style .panel {
+          display: inline-block;
+          width: 100%;
+        }
+.float-left {
+  font-size: 24px;
+  font-family: 'Montserrat', 'sans-serif';
+}
+.form-control {
+  font-size: 20px;
+  font-family: 'Montserrat', 'sans-serif';
 }
