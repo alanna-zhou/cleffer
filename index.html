@@ -4,13 +4,52 @@
 <button onclick="myFunction()">input your note here!</button>
 <p id="treble"></p>
 <p id="bass"></p>
+<p id="image"></p>
+
 <script>
 var musicNotesArray = ["C", "D", "E", "F", "G", "A", "B"];
+var imgArray = new Array();
+imgArray[0] = new Image();
+imgArray[0].src = '0.png';
+
+imgArray[1] = new Image();
+imgArray[1].src = '1.png';
+
+imgArray[2] = new Image();
+imgArray[2].src = '2.png';
+
+imgArray[3] = new Image();
+imgArray[3].src = '3.png';
+
+imgArray[4] = new Image();
+imgArray[4].src = '4.png';
+
+imgArray[5] = new Image();
+imgArray[5].src = '5.png';
+
+imgArray[6] = new Image();
+imgArray[6].src = '6.png';
+
+imgArray[7] = new Image();
+imgArray[7].src = '7.png';
+
+imgArray[8] = new Image();
+imgArray[8].src = '8.png';
+
+imgArray[9] = new Image();
+imgArray[9].src = '9.png';
+
+imgArray[10] = new Image();
+imgArray[10].src = '10.png';
+
+imgArray[11] = new Image();
+imgArray[11].src = '11.png';
 
 function myFunction() {
     var convertedNums;
     var treble;
     var bass;
+    var img;
     var input = prompt("enter note here").toUpperCase();
     input = input.trim();
     var inputArray = input.split(" ");
@@ -19,14 +58,17 @@ function myFunction() {
     if (inputIsValid(inputArray, musicNotesArray) == true) {
       treble = convertedNums;
       document.getElementById("treble").innerHTML = "Treble: " + treble; // prints input
+      postImages(treble, imgArray);
 
       bass = trebleToBass(convertedNums);
-       document.getElementById("bass").innerHTML = "Bass: " + bass; // prints input
-    }
+      document.getElementById("bass").innerHTML = "Bass: " + bass; // prints input
+      postImages(bass, imgArray);
 
+    }
     else {
       alert("Please enter valid music notes!");
     }
+
 }
 
 // functions to make sure that input contains musical notes
@@ -63,6 +105,12 @@ function trebleToBass(arr) {
     	output.push(arr[i] + 5);
     }
     return output;
+ }
+
+ function postImages(convertedNums, imgArray) {
+   for (var i = 0; i < convertedNums.length; i++) {
+     document.body.appendChild(imgArray[i]);
+   }
  }
 
 </script>
