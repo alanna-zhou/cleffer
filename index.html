@@ -45,6 +45,13 @@ imgArray[10].src = '10.png';
 imgArray[11] = new Image();
 imgArray[11].src = '11.png';
 
+var staffArray = new Array();
+staffArray[0] = new Image();
+staffArray[0].src = 'treble.png';
+
+staffArray[1] = new Image();
+staffArray[1].src = 'bass.png';
+
 function myFunction() {
     var convertedNums;
     var treble;
@@ -55,11 +62,17 @@ function myFunction() {
     var inputArray = input.split(" ");
     convertedNums = convertToNums(inputArray);
 
+    document.body.appendChild(staffArray[0]);
+
     if (inputIsValid(inputArray, musicNotesArray) == true) {
       treble = convertedNums;
       //document.getElementById("treble").innerHTML = "Treble: " + treble; // prints input
       postImages(treble, imgArray);
 
+      linebreak = document.createElement("br");
+      document.body.appendChild(linebreak);
+
+      document.body.appendChild(staffArray[1]);
       bass = trebleToBass(convertedNums);
       //document.getElementById("bass").innerHTML = "Bass: " + bass; // prints input
       postImages(bass, imgArray);
