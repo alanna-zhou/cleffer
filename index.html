@@ -2,19 +2,26 @@
 <html>
 <body>
 <button onclick="myFunction()">input your note here!</button>
-<p id="noteButton"></p>
+<p id="treble"></p>
+<p id="bass"></p>
 <script>
 var musicNotesArray = ["C", "D", "E", "F", "G", "A", "B"];
 
 function myFunction() {
-    var text;
+    var convertedNums;
+    var treble;
+    var bass;
     var input = prompt("enter note here").toUpperCase();
     input = input.trim();
     var inputArray = input.split(" ");
+    convertedNums = convertToNums(inputArray);
 
     if (inputIsValid(inputArray, musicNotesArray) == true) {
-      text = convertToNums(inputArray);
-      document.getElementById("noteButton").innerHTML = text; // prints input
+      treble = convertedNums;
+      document.getElementById("treble").innerHTML = "Treble: " + treble; // prints input
+
+      bass = trebleToBass(convertedNums);
+       document.getElementById("bass").innerHTML = "Bass: " + bass; // prints input
     }
 
     else {
@@ -47,7 +54,16 @@ function convertToNums(inputArray) {
       output.push(musicNotesArray.indexOf(inputArray[i]));
   }
   return output;
+
 }
+
+function trebleToBass(arr) {
+ var output = [];
+ 	for (var i = 0; i < arr.length; i++) {
+    	output.push(arr[i] + 5);
+    }
+    return output;
+ }
 
 </script>
 </body>
