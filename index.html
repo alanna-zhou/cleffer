@@ -109,7 +109,7 @@ function trebleToBass(arr) {
 
  function postImages(convertedNums, imgArray) {
    for (var i = 0; i < convertedNums.length; i++) {
-     document.body.appendChild(imgArray[i]);
+     document.body.appendChild(imgArray[convertedNums[i]].cloneNode(true));
    }
  }
 
