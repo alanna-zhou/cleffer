@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
 <link rel = "stylesheet" href = "main.css">
+<link rel="shortcut icon" href="treble.png"/>
+<title>Cleffer</title>
 <body>
-<button onclick="myFunction()">input your note here!</button>
-<p id="treble"></p>
-<p id="bass"></p>
+  <br></br>
+  <br></br>
+ <button onclick="myFunction()">
+   <div class = "ogButton">
+   <h3 class="topLine"> -enter your- </h3>
+   <h3 class="bottomLine">NOTES HERE</h3>
+   </div>
+ </button>
+ <p id = "treble"></p>
+<p id = "bass"></p>
 
 <script>
 var musicNotesArray = ["C", "D", "E", "F", "G", "A", "B"];
@@ -57,7 +66,7 @@ function myFunction() {
     var treble;
     var bass;
     var img;
-    var input = prompt("enter note here").toUpperCase();
+    var input = prompt("Enter Music Notes: ").toUpperCase();
     input = input.trim();
     var inputArray = input.split(" ");
     convertedNums = convertToNums(inputArray);
