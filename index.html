@@ -57,11 +57,11 @@ function myFunction() {
 
     if (inputIsValid(inputArray, musicNotesArray) == true) {
       treble = convertedNums;
-      document.getElementById("treble").innerHTML = "Treble: " + treble; // prints input
+      //document.getElementById("treble").innerHTML = "Treble: " + treble; // prints input
       postImages(treble, imgArray);
 
       bass = trebleToBass(convertedNums);
-      document.getElementById("bass").innerHTML = "Bass: " + bass; // prints input
+      //document.getElementById("bass").innerHTML = "Bass: " + bass; // prints input
       postImages(bass, imgArray);
 
     }
